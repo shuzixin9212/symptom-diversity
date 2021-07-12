@@ -1860,58 +1860,24 @@ public class NodeDiversity {
      * @param args
      */
     public static void main(String[] args) {
+        
+        NodeDiversity nd = new NodeDiversity();
 
-//        // TODO Auto-generated method stub
-//        NodeDiversity nd = new NodeDiversity();
-//
-////		2019.06.10
-//		String strPre="/Users/wangjingjing/PycharmProjects/dissertation/";
-//		String strFile="/Users/wangjingjing/PycharmProjects/dissertation/data_symp/SympNet2_relations_fre1_bis.csv";
-//		String strFileObj=strPre+"data_symp/SympNet2_relations_fre1_degree_bis.txt";
-//		nd.generateNodeDegree(strFile, strFileObj,",", 0, 1);
-//		String strFileObj_ND="/Users/wangjingjing/PycharmProjects/dissertation/data_symp/SympNet2_relations_fre1_bis_ND.txt";
-//		String strFileObj_NB1="/Users/wangjingjing/PycharmProjects/dissertation/data_symp/SympNet2_relations_fre1_bis_NB1.txt";
-//		String strFileObj_NB2="/Users/wangjingjing/PycharmProjects/dissertation/data_symp/SympNet2_relations_fre1_bis_NB2.txt";
-//		nd.getBridgeCoefficient_m(strFileObj, strFileObj_NB1, true);
-//		nd.getBridgeCoefficient(strFileObj,strFileObj_NB2);
-//		nd.getBridgeCoefficient_m(strFileObj,strFileObj_ND,false);
-//
-////		PPI
-//        String strPre_ppi = "E:/Project/JavaProject/SGN+NodeDiversity/test/";
-//        String strFile_ppi=strPre_ppi+"ppi/ppi.csv";
-//        String strFileObj_ppi=strPre_ppi+"ppi/ppi_degree.txt";
-//		nd.generateNodeDegree(strFile_ppi, strFileObj_ppi,",", 0, 1);
-//
-//		String strFileObj_ppi_ND=strPre_ppi+"ppi/ppi_ND.txt";
-//		String strFileObj_ppi_NB1=strPre_ppi+"ppi/ppi_NB1.txt";
-//		String strFileObj_ppi_NB2=strPre_ppi+"ppi/ppi_NB2.txt";
-//		nd.getBridgeCoefficient_m(strFileObj_ppi, strFileObj_ppi_NB1, true);
-//		nd.getBridgeCoefficient(strFileObj_ppi,strFileObj_ppi_NB2);
-//		nd.getBridgeCoefficient_m(strFileObj_ppi,strFileObj_ppi_ND,false);
+//		PPI
+        // If the code is not running successfully, please change this to an absolute path.
+        String strPre = "./SCN";
+        String strFile_ppi=strPre+"ppi/Protein-protein interaction network.csv";
+        String strFileObj_ppi=strPre+"ppi/ppi_degree.txt";
+		nd.generateNodeDegree(strFile_ppi, strFileObj_ppi,",", 0, 1);
+		String strFileObj_ppi_NB1=strPre+"NodeDiversity/PPI_NodeDiversity.txt";
+		nd.getBridgeCoefficient_m(strFileObj_ppi, strFileObj_ppi_NB1, true);
 
-//		2020.09.05
-//        String strPre = "E:/Project/JavaProject/SGN+NodeDiversity/test";
-//        String outDate = "20210120";
-//        String strFile = strPre + "/data_gene_" + outDate + "/cui130_subnet_intersection2_" + outDate + ".csv";
-//        String strFileObj = strPre + "/data_gene_" + outDate + "/cui130_subnet_intersection2_degree_" + outDate + ".txt";
-//        nd.generateNodeDegree(strFile, strFileObj, ",", 0, 1);
-//        String strFileObj_ND = strPre + "/data_gene_" + outDate + "/cui130_subnet_intersection2_ND_" + outDate + ".txt";
-//        String strFileObj_NB1 = strPre + "/data_gene_" + outDate + "/cui130_subnet_intersection2_NB1_" + outDate + ".txt";
-//        String strFileObj_NB2 = strPre + "/data_gene_" + outDate + "/cui130_subnet_intersection2_NB2_" + outDate + ".txt";
-//        nd.getBridgeCoefficient_m(strFileObj, strFileObj_NB1, true);
-//        nd.getBridgeCoefficient(strFileObj, strFileObj_NB2);
-//        nd.getBridgeCoefficient_m(strFileObj, strFileObj_ND, false);
+		//SCN
+        String strFile_SCN=strPre+"/SCN/tmp/Symptom clinical association network.csv";
+        String strFileObj_SCN=strPre+"/SCN/tmp/SCN_degree.txt";
+        nd.generateNodeDegree(strFile_SCN, strFileObj_SCN,",", 0, 1);
+        String strFileObj_SCN_NB1=strPre+"NodeDiversity/SCN_NodeDiversity.txt";
+        nd.getBridgeCoefficient_m(strFileObj_SCN, strFileObj_SCN_NB1, true);
 
-//        String strPre = "E:/Project/JavaProject/SGN+NodeDiversity/SCN/";
-//		String strFile=strPre+"SCN_0124.csv";
-//		String strFileObj=strPre+"SCN_degree_0124.txt";
-//		nd.generateNodeDegree(strFile, strFileObj,",", 0, 1);
-//
-//		String strFileObj_ND=strPre+"symp_ND_SCN_0124.txt";
-//		String strFileObj_NB1=strPre+"symp_NB1_SCN_0124.txt";
-//		String strFileObj_NB2=strPre+"symp_NB2_SCN_0124.txt";
-//		nd.getBridgeCoefficient_m(strFileObj, strFileObj_NB1, true);
-//		nd.getBridgeCoefficient(strFileObj,strFileObj_NB2);
-//		nd.getBridgeCoefficient_m(strFileObj,strFileObj_ND,false);
     }
 }
